@@ -1,0 +1,15 @@
+{
+  "name": "Gemini Tracker",
+  "short_name": "Gemini Tracker",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#131314",
+  "theme_color": "#131314",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}
