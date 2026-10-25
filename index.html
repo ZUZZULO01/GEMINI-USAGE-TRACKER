@@ -23,7 +23,7 @@
 
   <script type="text/babel">
     const { useState, useEffect } = React;
-    const STORAGE_KEY = 'gemini_usage_tracker_v12';
+    const STORAGE_KEY = 'gemini_usage_tracker_v13';
 
     const DEFAULT_MODELS = [
       { id: 'argon', name: 'Gemini Argon', badge: 'Ultra / Deep Reasoning', color: 'from-purple-500 to-indigo-500', border: 'border-purple-500/30', text: 'text-purple-300', costPrompt: 5.0, costFile: 12.0 },
@@ -130,7 +130,19 @@
       return (
         <div className="min-h-screen bg-[#131314] text-[#e3e3e3] p-4 md:p-8 max-w-4xl mx-auto space-y-6">
           <header className="flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-white/10">
-            <div>
+            <div className="flex items-center gap-3">
+              {/* Simbolino / Logo Gemini SVG */}
+              <svg className="w-8 h-8 flex-shrink-0" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                <path d="M256 100c-15 75-75 135-150 150 75 15 135 75 150 150 15-75 75-135 150-150-75-15-135-75-150-150z" fill="url(#headerGrad)"/>
+                <defs>
+                  <linearGradient id="headerGrad" x1="106" y1="100" x2="406" y2="400" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#ea4335"/>
+                    <stop offset="30%" stop-color="#fbbc04"/>
+                    <stop offset="60%" stop-color="#34a853"/>
+                    <stop offset="100%" stop-color="#4285f4"/>
+                  </linearGradient>
+                </defs>
+              </svg>
               <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-400 bg-clip-text text-transparent">
                 Gemini Tracker
               </h1>
